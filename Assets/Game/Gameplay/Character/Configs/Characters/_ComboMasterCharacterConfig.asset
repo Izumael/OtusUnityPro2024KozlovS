@@ -26,8 +26,6 @@ MonoBehaviour:
   EntityViewPrefab: {fileID: 6226108324609227229, guid: f442c84d4e46cc148b2126aedaad7cfe, type: 3}
   CharacterVisualPrefab: {fileID: 5669538231628601157, guid: 2fabc084d8339fa42915677af883d6b4, type: 3}
   Abilities:
-  - {fileID: 11400000, guid: b1713b307a7723044ad0dc7a1ebf15d5, type: 2}
   - {fileID: 11400000, guid: 5b1ea517e56054b45bd95efcca7d00ab, type: 2}
   - {fileID: 11400000, guid: dbce98d889b927d4bbd83df27db17b36, type: 2}
   - {fileID: 11400000, guid: aebff1d1d5ebfc14799f0dafd7c9243f, type: 2}
-  - {fileID: 11400000, guid: b1713b307a7723044ad0dc7a1ebf15d5, type: 2}
