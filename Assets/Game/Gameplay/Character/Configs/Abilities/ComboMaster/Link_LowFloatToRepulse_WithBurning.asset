@@ -40,7 +40,7 @@ MonoBehaviour:
         <AbilityVisualData>k__BackingField:
           AbilityVfxData:
             Prefab: {fileID: 179617693071064624, guid: 76557be7663b50b4b9e3239617c76343, type: 3}
-            CollisionDelay: 1
+            CollisionDelay: 0.01
             JumpPower: 0
             AppearanceType: 0
           CastType: 10

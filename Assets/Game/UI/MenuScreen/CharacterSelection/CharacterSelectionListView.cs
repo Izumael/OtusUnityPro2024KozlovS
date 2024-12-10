@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using Game.Gameplay;
-using TMPro;
-using UnityEditor;
+﻿using Game.Gameplay;
 using UnityEngine;
-using UnityEngine.UI;
 using Zenject;
 
 public class CharacterSelectionListView : MonoBehaviour
