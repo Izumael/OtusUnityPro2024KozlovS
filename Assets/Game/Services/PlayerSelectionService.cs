@@ -7,11 +7,15 @@ public class PlayerSelectionService
 {
     public event Action<GameObject, int> OnCharacterSelected;
     public event Action<GameObject, int> OnCharacterDeselected;
+    public event Action<CharacterConfig> OnCharacterHighlited;
+    public event Action OnCharacterUnhighlited;
     
     //Characters selection
     public int MaxSelectedCharacters { get; } = 3;
-    private CharacterConfig[] SelectedCharacters = new CharacterConfig[4];
+    public CharacterConfig[] SelectedCharacters { get; private set; }= new CharacterConfig[4];
     private Vector2[] SelectedCharacterPositions = new Vector2[4];
+    
+    private CharacterConfig HighlitedCharacter; 
     
     //Characters visuals
     private List<KeyValuePair<CharacterConfig, GameObject>> _characterVisuals = new();
@@ -32,9 +36,7 @@ public class PlayerSelectionService
                 break;
             }
         }
-        // SelectedCharacters.Add(newCharacter);
         SelectedCharacterPositions[index] = Vector2.zero;
-        // int index = SelectedCharacters.Count - 1;
         GameObject visual = _characterVisuals.Find(x => x.Key == newCharacter).Value;
         OnCharacterSelected?.Invoke(visual, index);
     }
@@ -50,9 +52,7 @@ public class PlayerSelectionService
                 break;
             }
         }
-        // SelectedCharacters.Remove(character);
         SelectedCharacterPositions[index] = Vector2.zero;
-        // index = _characterVisuals.FindIndex(x => x.Key == character);
         GameObject visual = _characterVisuals.Find(x => x.Key == character).Value;
         OnCharacterDeselected?.Invoke(visual, index);
     }
@@ -66,5 +66,21 @@ public class PlayerSelectionService
                 SelectedCharacterPositions[i] = newPosition;
             }
         }
+    }
+
+    public void UnhighlightCharacter()
+    {
+        HighlitedCharacter = null;
+        OnCharacterUnhighlited?.Invoke();
+    }
+
+    public void HighlightCharacter(int index)
+    {
+        if (SelectedCharacters[index] == null)
+        {
+            return;
+        }
+        HighlitedCharacter = SelectedCharacters[index];
+        OnCharacterHighlited?.Invoke(HighlitedCharacter);
     }
 }
