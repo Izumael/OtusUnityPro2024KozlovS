@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 443036e8b52447009cd2270532cbba85, type: 3}
+  m_Name: Warrior2CharacterConfig
+  m_EditorClassIdentifier: 
+  CharacterName: Warrior 2
+  StatsData:
+  - StatType: 0
+    Value: 500
+  - StatType: 10
+    Value: 80
+  - StatType: 20
+    Value: 50
+  - StatType: 30
+    Value: 10
+  EntityViewPrefab: {fileID: 6226108324609227229, guid: f442c84d4e46cc148b2126aedaad7cfe, type: 3}
+  CharacterVisualPrefab: {fileID: 1809196142169108, guid: 416da3099c894a240b4b154ea381011d, type: 3}
+  Abilities:
+  - {fileID: 11400000, guid: bc1c5a3701401da488908fa63ad18c1c, type: 2}

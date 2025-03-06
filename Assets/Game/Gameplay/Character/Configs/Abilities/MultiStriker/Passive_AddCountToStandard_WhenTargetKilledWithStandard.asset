@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e10820676d3a4489ba6466756e92bd8d, type: 3}
+  m_Name: Passive_AddCountToStandard_WhenTargetKilledWithStandard
+  m_EditorClassIdentifier: 
+  Icon: {fileID: 21300000, guid: 7c44ac67d9efa5f468f39f3841af823a, type: 3}
+  Name: Sneaky Freaky
+  Description: Stole a kill with a standard attack? No! This is an opportunity to
+    kill again! Maybe it will only get steeper from now on, watch the level!
+  Abilities:
+  - rid: 7750859990555688960
+  references:
+    version: 2
+    RefIds:
+    - rid: 7750859990555688960
+      type: {class: AddCountToSourceOnResultPassiveEffect, ns: Game.Gameplay, asm: Assembly-CSharp}
+      data:
+        <InteractionResultsToTrigger>k__BackingField: 50000000
+        <InteractionTypesToTrigger>k__BackingField: 0a000000
+        <EffectProbability>k__BackingField: 1
+        <AddCountsOnTrigger>k__BackingField: 1
+        <InteractionType>k__BackingField: 40
+        <AbilityVisualData>k__BackingField:
+          AbilityVfxData:
+            Prefab: {fileID: 0}
+            CollisionDelay: 0.5
+            JumpPower: 0
+            AppearanceType: 0
+          CastType: 20
+          CollisionType: 0
+          SourceAnimationClip: 0
+          MeelePositionOffset: 1
